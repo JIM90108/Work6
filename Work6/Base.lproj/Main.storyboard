@@ -1,24 +1,733 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DMu-xh-TnT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--會員登入-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Work6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Unknown" translatesAutoresizingMaskIntoConstraints="NO" id="DNw-IU-NsU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNY-qA-lgZ">
+                                <rect key="frame" x="82" y="475" width="261" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXC-Gb-qqV">
+                                <rect key="frame" x="115" y="686" width="185" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="註冊">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="nQT-ws-F20" kind="show" id="fhm-CP-eWa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ7-CV-q7K">
+                                <rect key="frame" x="120" y="577" width="185" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="登入">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="8m2-7V-yfA" kind="show" id="2Bl-a0-Ioe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="會員密碼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HI-M4-hQ7">
+                                <rect key="frame" x="146" y="402" width="122" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入信箱/帳號" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAk-Li-cBF">
+                                <rect key="frame" x="82" y="310" width="261" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="會員帳號" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuT-vn-Rah">
+                                <rect key="frame" x="146" y="222" width="122" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" title="會員登入" id="iaI-Cc-5NP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="67.633928571428569"/>
+        </scene>
+        <!--註冊-->
+        <scene sceneID="hVM-mr-w5d">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="nQT-ws-F20" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S2L-BO-caO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="帳號：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTZ-Si-fWy">
+                                <rect key="frame" x="45" y="336" width="123" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密碼 ：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwn-Xy-2LN">
+                                <rect key="frame" x="45" y="479" width="123" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入信箱/帳號" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1C-g3-Np4">
+                                <rect key="frame" x="191" y="340" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6RR-st-aBr">
+                                <rect key="frame" x="191" y="483" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IU-Dk-RWJ">
+                                <rect key="frame" x="115" y="672" width="185" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="註冊">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dgc-Vx-Gi3"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="註冊" id="APv-cL-4ZT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egz-6F-HTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="771"/>
+        </scene>
+        <!--狗狗-->
+        <scene sceneID="P3k-jQ-Vja">
+            <objects>
+                <viewController id="Ekb-D7-yZr" customClass="Dog" customModule="Work6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ivJ-11-osO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zxe-fi-8NM">
+                                <rect key="frame" x="20" y="175" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="溫馨狗"/>
+                                    <segment title="動作狗"/>
+                                    <segment title="卡通狗"/>
+                                    <segment title="喜劇狗"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="dogTypeSegment:" destination="Ekb-D7-yZr" eventType="valueChanged" id="LyR-VW-lzA"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6Z-KA-9kV">
+                                <rect key="frame" x="20" y="415" width="37" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="back:" destination="Ekb-D7-yZr" eventType="touchUpInside" id="Ddg-XZ-wKg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgW-MM-tch">
+                                <rect key="frame" x="357" y="415" width="37" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
+                                <connections>
+                                    <action selector="next:" destination="Ekb-D7-yZr" eventType="touchUpInside" id="1bV-B2-Yyp"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psf-hT-DgT">
+                                <rect key="frame" x="82" y="280" width="250" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="K20-p7-veC">
+                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="為了與你相遇" translatesAutoresizingMaskIntoConstraints="NO" id="aqx-yZ-P4p">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Z8k-EL-NfW" appends="YES" id="3wf-rB-VVq"/>
+                                                    <outletCollection property="gestureRecognizers" destination="DBo-T1-gaS" appends="YES" id="COo-1Z-JQk"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="雷霆戰狗" translatesAutoresizingMaskIntoConstraints="NO" id="1yt-WI-bHM">
+                                                <rect key="frame" x="500" y="0.0" width="250" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="aex-Gs-F6m" appends="YES" id="Fhp-VJ-45Z"/>
+                                                    <outletCollection property="gestureRecognizers" destination="sT7-G0-LhB" appends="YES" id="PxE-RR-Udl"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="比佛利拜金狗" translatesAutoresizingMaskIntoConstraints="NO" id="gH6-8S-Qh1">
+                                                <rect key="frame" x="750" y="0.0" width="250" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="X4t-Mz-tJS" appends="YES" id="gMX-zO-5TN"/>
+                                                    <outletCollection property="gestureRecognizers" destination="xf6-mX-7ma" appends="YES" id="Zf0-gv-BEc"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="極地守護犬" translatesAutoresizingMaskIntoConstraints="NO" id="QQA-tC-Szl">
+                                                <rect key="frame" x="250" y="0.0" width="250" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="0j1-gn-LPC" appends="YES" id="CEK-YD-Krc"/>
+                                                    <outletCollection property="gestureRecognizers" destination="QZr-l7-gx3" appends="YES" id="DdZ-xh-ZFj"/>
+                                                </connections>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="極地守護犬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXv-fL-9pq">
+                                                <rect key="frame" x="250" y="250" width="250" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.52156865600000002" green="0.80392158030000005" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.44364619760000001" green="0.24237871499999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="雷霆戰狗" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2je-zO-8u6">
+                                                <rect key="frame" x="500" y="250" width="250" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.44364619760000001" green="0.24237871499999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="比佛利拜金狗" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xz-CM-9Z2">
+                                                <rect key="frame" x="750" y="250" width="250" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.44364619760000001" green="0.24237871499999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="為了與你相遇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1L-Sc-ecs">
+                                                <rect key="frame" x="0.0" y="250" width="250" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.83269318739999998" blue="0.98250252439999997" alpha="0.49040710030000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.44364619760000001" green="0.24237871499999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="PKL-oU-IfF"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="E3i-xX-h7q"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Jxx-yz-OPG"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="dHY-sa-QwY">
+                                <rect key="frame" x="0.0" y="588" width="414" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemGray6Color"/>
+                                <connections>
+                                    <action selector="dogPageControl:" destination="Ekb-D7-yZr" eventType="valueChanged" id="5fr-pQ-612"/>
+                                </connections>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q6E-Th-1X3">
+                                <rect key="frame" x="20" y="622" width="370" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="FJ9-wb-Apf">
+                                        <rect key="frame" x="0.0" y="0.0" width="1480" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mRv-NS-ZMX">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">電影介紹:《為了與你相遇》（英語：A Dog's Purpose）是一部於2017年上映的美國溫馨劇情電影，由萊思·霍斯壯執導，W·布魯斯·卡梅隆、凱薩琳·米切恩、奧黛麗·威爾斯、瑪雅·佛布斯及華利·沃洛達斯基共同編劇，劇情改編自由卡梅隆所著的2010年《同名小說》。主演包含布麗特妮·羅伯森、K·J·阿帕、茱麗葉·瑞蘭斯、約翰·歐提茲、柯比·豪威爾·巴佩提斯、佩姬·利普頓、丹尼斯·奎德與喬許·蓋德等人。
+電影於2017年1月27日由環球影業在美國發行，並收穫影評人的混合評價。台灣則在2017年2月24日上映。中國大陸在2017年3月3日上映。續集《狗狗的旅程》於2019年5月17日由環球影業在美國發行。</string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cFm-s0-wyZ">
+                                                <rect key="frame" x="370" y="0.0" width="370" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">電影介紹:《極地守護犬》（英語：The Call of the Wild，中國大陸譯《野性的呼喚》）是一部預定於2020年上映的美國真人動畫冒險片，由克里斯·桑德斯執導，麥可·葛林編劇。電影改編自傑克·倫敦的1903年小說《野性的呼喚》，主演包括哈里遜·福特、丹·史蒂文斯、凱倫·吉蘭和歐馬·希。2017年10月，宣佈二十世紀福斯正在開發改編自傑克·倫敦1903年小說《野性的呼喚》的電影。故事設定在1890年代的克朗代克淘金熱時期的育空，由克里斯·桑德斯執導，麥可·葛林編劇，爾文·史托夫（英語：Erwin Stoff）擔任製片人[7]。2018年7月，哈里遜·福特和丹·史蒂文斯加盟電影。電影特效將由Technoprops負責[8][9]。2018年8月，科林·伍德爾加盟電影[10]。9月，歐馬·希和凱倫·吉蘭加盟電影[11][12]。10月，布萊德利·惠特福德加盟電影[13]。</string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oyK-Fb-vyf">
+                                                <rect key="frame" x="740" y="0.0" width="370" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">電影介紹: 一隻名叫波特（Bolt）的白色的德國牧羊犬是一個大受歡迎的電視節目中的主角，而他的主人佩妮（Penny）同時也在這個電視節目中演出他劇裡的主人。在節目中，波特有著各式各樣的超能力，包括了力大無比、飛快的速度、能由眼睛發出炙熱的光線和幾近無敵超聲波武器「狗吼功」（super bark），並且不斷阻止卡里科（Calico）博士的邪惡計劃。然而，劇組的人員一直不讓波特知道其實這一切都只是演戲，也因為這樣，波特一直不知道他所有的超能力其實都是假的。
+
+一次意外，波特在紐約走失了。在回家的途中遇上的黑貓咪咪（Mitten）和波特的忠實粉絲倉鼠阿諾（Rhino，又譯倉鼠阿諾），過程中一次一次的冒險使波特覺醒自己是沒有超能力的，亦加深了對咪咪和阿諾的感情。牠們乘坐過不同的交通工具，有火車、貨車、旅行車、運泥車，經過數月後終於回到片場。此刻佩妮因（假）波特怯場慌亂發生火災意外，波特知道佩妮有危險，馬上衝入片場找到佩妮，但四處已陷入一片火海中，波特帶佩妮逃亡至通風口，不過佩妮倒下不能走了，波特向通風口咆哮「狗吼功」，消防員才發現救他們出來。送醫時佩妮母親對經紀人仍一副勢利嘴臉感到憤怒、不再讓女兒演出，所以節目安排主人臉部傷勢嚴重得整容的劇情來換角。除波特重回佩妮懷抱外，咪咪和阿諾也被她收養而在一起。</string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="loz-iz-1kQ">
+                                                <rect key="frame" x="1110" y="0.0" width="370" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">電影介紹:家住比華利山的芝娃娃「Chloe」（茱·芭莉摩聲演），平日被主人Vivian Ashe（潔美·李·寇蒂斯飾）寵愛，過著超豪闊太生活。由於Vivian要出國工作，所以只好把Chloe交由侄女Rachel Ashe（派波兒·普拉寶（Piper Perabo）飾）照顧，不情願照顧Chloe的Rachel因為忍不了單調工作，所以載著Chloe和朋友去墨西哥旅遊，其間Rachel把Chloe放在酒店，意想不到的是Chloe自己離開酒店而被墨西哥黑幫擄走作鬥犬之用，雖然有正義德國狼犬「Delgado」（安迪·加西亞（Andy García）聲演）勇救Chloe脫險，但黑幫大哥認為Chloe有價值，打算用Chloe向其主人勒索，於是出動都拍文El Diablo尾隨狂追，引發一次驚險刺激的大冒險。</string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="5rW-QG-Wla"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="njW-kO-qac"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Z9A-QC-uoE"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VJd-No-1eo"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="狗狗" image="pawprint" catalog="system" id="YYR-cb-6aj"/>
+                    <navigationItem key="navigationItem" title="狗狗" id="Tqf-gf-we8"/>
+                    <connections>
+                        <outlet property="backButton" destination="V6Z-KA-9kV" id="uXe-js-OjG"/>
+                        <outlet property="dogPage" destination="dHY-sa-QwY" id="HzN-KC-uZo"/>
+                        <outlet property="dogScroll" destination="Psf-hT-DgT" id="nj6-77-lRT"/>
+                        <outlet property="dogSegment" destination="Zxe-fi-8NM" id="aw2-y4-2aq"/>
+                        <outlet property="introduceDogMoive" destination="Q6E-Th-1X3" id="9uI-vD-Ulq"/>
+                        <outlet property="nextButton" destination="SgW-MM-tch" id="6v3-iV-Uy1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQT-ai-WjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="Z8k-EL-NfW">
+                    <connections>
+                        <action selector="dogImageSwipe:" destination="Ekb-D7-yZr" id="0u1-jm-8Il"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="0j1-gn-LPC">
+                    <connections>
+                        <action selector="dogImageSwipe:" destination="Ekb-D7-yZr" id="tSQ-sw-lum"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="sT7-G0-LhB">
+                    <connections>
+                        <action selector="dogImageSwipe:" destination="Ekb-D7-yZr" id="hvO-rJ-G52"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="X4t-Mz-tJS">
+                    <connections>
+                        <action selector="dogImageSwipe:" destination="Ekb-D7-yZr" id="etl-u4-Jii"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="DBo-T1-gaS">
+                    <connections>
+                        <action selector="dogImageSwipe:" destination="Ekb-D7-yZr" id="NRJ-dV-ab2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="QZr-l7-gx3">
+                    <connections>
+                        <action selector="dogImageSwipe:" destination="Ekb-D7-yZr" id="zPX-VJ-Up3"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="aex-Gs-F6m">
+                    <connections>
+                        <action selector="dogImageSwipe:" destination="Ekb-D7-yZr" id="Pmw-0Z-Kbd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="xf6-mX-7ma">
+                    <connections>
+                        <action selector="dogImageSwipe:" destination="Ekb-D7-yZr" id="QSb-d9-P1o"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2830" y="68"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LIZ-Ot-Txe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DMu-xh-TnT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z8V-Oz-i5F">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="compactAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8HF-sZ-dg2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GfF-6l-llF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
+        </scene>
+        <!--貓狗電影-->
+        <scene sceneID="2Vr-jd-BMw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8m2-7V-yfA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="貓狗電影" id="k8T-Mo-4Xe"/>
+                    <tabBar key="tabBar" tag="1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="NlT-yG-NxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="scrollEdgeAppearance" stackedItemWidth="0.0"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ekb-D7-yZr" kind="relationship" relationship="viewControllers" id="pei-tJ-YhV"/>
+                        <segue destination="cMM-rX-RMw" kind="relationship" relationship="viewControllers" id="er0-CN-v4g"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13u-Pt-W6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.8840579710147" y="67.633928571428569"/>
+        </scene>
+        <!--貓咪-->
+        <scene sceneID="ZcQ-fd-tOD">
+            <objects>
+                <viewController id="cMM-rX-RMw" customClass="Cat" customModule="Work6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yiw-Li-jUi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-fo-f7Y">
+                                <rect key="frame" x="20" y="175" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="溫馨貓"/>
+                                    <segment title="動作貓"/>
+                                    <segment title="卡通貓"/>
+                                    <segment title="喜劇貓"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="catSegmentControl:" destination="cMM-rX-RMw" eventType="valueChanged" id="XcN-dl-wpQ"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKO-uD-4az">
+                                <rect key="frame" x="20" y="415" width="37" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="catBackButton:" destination="cMM-rX-RMw" eventType="touchUpInside" id="YDT-oU-69g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsB-Bo-rq0">
+                                <rect key="frame" x="357" y="415" width="37" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
+                                <connections>
+                                    <action selector="catNextButton:" destination="cMM-rX-RMw" eventType="touchUpInside" id="56K-lq-Wg4"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wh3-pC-5cF">
+                                <rect key="frame" x="82" y="280" width="250" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="XwY-v6-5io">
+                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="遇見街貓" translatesAutoresizingMaskIntoConstraints="NO" id="AC5-dE-d4P">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="VHY-cm-j08" appends="YES" id="OP4-VI-XSo"/>
+                                                    <outletCollection property="gestureRecognizers" destination="7vC-gR-naW" appends="YES" id="suu-mY-TZd"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="黑貓魯道夫" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-ry-i4h">
+                                                <rect key="frame" x="500" y="0.0" width="250" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Kpl-nm-Vqr" appends="YES" id="B5C-hN-Ufr"/>
+                                                    <outletCollection property="gestureRecognizers" destination="boC-AV-X6G" appends="YES" id="v2I-AJ-Qln"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="加菲貓" translatesAutoresizingMaskIntoConstraints="NO" id="0ZP-rM-HGH">
+                                                <rect key="frame" x="750" y="0.0" width="250" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="bpZ-87-t4v" appends="YES" id="xQj-f6-d0Z"/>
+                                                    <outletCollection property="gestureRecognizers" destination="VId-zs-RwE" appends="YES" id="oHf-Au-nXK"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="貓女" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-DI-dOK">
+                                                <rect key="frame" x="250" y="0.0" width="250" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="uy0-CJ-Qes" appends="YES" id="hQM-mH-XeN"/>
+                                                    <outletCollection property="gestureRecognizers" destination="B2v-g4-Qca" appends="YES" id="lGZ-gC-DmF"/>
+                                                </connections>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="貓女" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNX-i3-cla">
+                                                <rect key="frame" x="250" y="250" width="250" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="黑貓魯道夫" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEf-u4-6Jq">
+                                                <rect key="frame" x="500" y="250" width="250" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="加菲貓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW5-SB-mHf">
+                                                <rect key="frame" x="750" y="250" width="250" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="遇見街貓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3W-AD-aJx">
+                                                <rect key="frame" x="0.0" y="250" width="250" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Iqz-eI-dyD"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Adg-Kj-Uk4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="RM3-qh-OPa"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-1x-a37">
+                                <rect key="frame" x="0.0" y="588" width="414" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemGray6Color"/>
+                                <connections>
+                                    <action selector="catPageControl:" destination="cMM-rX-RMw" eventType="valueChanged" id="nde-Ll-DID"/>
+                                </connections>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcw-HZ-CJq">
+                                <rect key="frame" x="20" y="622" width="370" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="BVP-sg-bxk">
+                                        <rect key="frame" x="0.0" y="0.0" width="1480" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UPX-SE-egO">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">電影介紹:《遇見街貓BOB》（英語：A Street Cat Named Bob）是一部2016年英國家庭喜劇片，由羅傑·史波提斯伍德執導，改編自詹姆士·伯恩的同名書籍。由路克·索德威飾演詹姆士·伯恩，鮑伯（Bob）飾演牠自己。
+該片於2016年11月3日在倫敦首映，隔日在英國廣泛上映，而臺灣則於2016年12月16日上映。故事敘述詹姆士·伯恩是名戒毒者，經濟狀況不佳的他常在街頭表演賣藝。某日，詹姆士在家中發現了受傷的橘貓，鄰居女孩將橘貓取名為「鮑伯」（Bob）詹姆士並細心的照料牠。詹姆士在找到失主前，時常帶著鮑伯到街上和自己一起賣藝，而獲得了不少關注和歡迎。而兩人還共度了歡樂和詹姆士毒癮發作的痛苦時光；為此，詹姆士和鮑伯漸漸地產生了深刻的奇妙友誼。</string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R2z-c7-DwN">
+                                                <rect key="frame" x="370" y="0.0" width="370" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">電影介紹:《貓女》（英語：Catwoman），是DC漫畫公司的《蝙蝠俠》系列的一個虛擬人物，由比爾·芬格和鮑勃·凱恩創作，靈感來源於凱恩的親戚露絲·斯蒂爾（Ruth Steel）。[1] 。
+最原始並且最為人所知的貓女是瑟琳娜·凱爾（又譯為塞利娜·凱爾）（Selina Kyle），最先出現在第一期《蝙蝠俠》漫畫（1940年），一隻貓的形象。作為蝙蝠俠的敵人，她是一個帶著鞭子、喜歡冒險的盜竊犯。[2]。現代作家認為，貓女的行動和服飾特徵是一個對性虐戀的回應。
+1990年代來，貓女獨立成刊。她在同名漫畫系列是一個「非正統女主角」，而非一個反派女主角。在漫畫中，她是蝙蝠俠愛慕時間最久的角色，被認為是蝙蝠俠的真愛之一。
+作為一個受歡迎的角色，貓女經常出現在媒體創作的蝙蝠俠的改寫本中。朱麗葉·紐瑪（Julie Newmar）、李·瑪麗沃勒（Lee Meriwether）、厄莎·凱特（Eartha Kitt）三位女演員分別在20世紀60年代上映[電視劇《蝙蝠俠》和1966年上映的電影《蝙蝠俠》中把貓女的形象呈現給觀眾。蜜雪兒·菲佛也在1992年上映的電影《蝙蝠俠大顯神威》中扮演了貓女這一角色。荷莉·貝瑞則在2004年上映的同名電影《貓女》詮釋了一個獨立於蝙蝠俠故事之外的貓女，然而這部電影遭到了票房跟影評的失敗。而安·海瑟薇在2012年上映的《黑暗騎士：黎明昇起》扮演了貓女這一角色。
+貓女在IGN的榜單《Top 100 Comic Book Villains Of All Time》中排在第11位[3]。她同樣在雜誌《巫師》（Wizard）的榜單《史上百大惡棍》（100 Greatest Villains of All Time）總排在第51位[4]。</string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zW7-25-UST">
+                                                <rect key="frame" x="740" y="0.0" width="370" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">電影介紹:《黑貓魯道夫》黑貓魯道夫與最愛的主人理惠住在一起，某天它為了逃離魚店老闆的追打而意外跳上長途貨車，不知不覺來到了大都會-東京。 它在那裏邂逅了讓所有貓都畏懼、看得懂人類文字的街貓老大可多樂。
+找不到回家方向的魯道夫，只能跟着深諳街頭生存之道的可多樂，展開一段流浪貓的冒險生活…。究竟魯道夫能不能回到理惠的懷抱呢？可多樂又隱瞞了什麼不為人知的秘密？邀請大家跟着這羣流浪貓們，一同探尋這個危機四伏的人類世界，盡情暢遊在温暖動人的萌貓國度吧！ [1] </string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iDE-AS-fT8">
+                                                <rect key="frame" x="1110" y="0.0" width="370" height="170"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">電影介紹:《加菲貓》該作以寵物主人和他們的寵物取材，並帶出「很多時候，寵物才是家裏的主宰」的信息。另外，加菲貓亦常需要解決許多人類遇到的問題，例如減肥、對星期一的厭惡及恐懼、對事物的冷感及煩悶等。加菲貓亦經常欺負自己的主人，呈現調皮搗蛋的樣貌。
+事實上，加菲貓的心理及行為特徵越來越接近人類而非貓。1980年代初期，加菲貓開始以兩腳行走而非以四腳爬行，而漫畫的主題亦漸漸加入了喜劇（例如加菲貓取笑他的主人愚蠢或情場上的失敗），反而著墨貓的毛病的地方越來越少。一些讀者認為，雖然漫畫的畫功多年來沒有改變、沒有退步，但就題材而言，該漫畫的質素正在下降。值得留意的是，近年來吉姆‧戴維斯已經不再是唯一的作者，甚至不是主筆了。
+加菲貓於1982年首次以電視動畫出現，在2004年加菲貓更被搬上銀幕。該年6月11日上映的《加菲貓》電影（Garfield: The Movie），以電腦動畫製作的加菲貓及一隻由真狗扮演的歐弟為主角。其他角色如姜‧艾伯克亦以真人扮演，獲取一致好評。</string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="8xy-ud-bYs"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Hze-oT-cdP"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="VLp-Ps-Pjb"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bxa-YS-gpv"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="貓咪" image="hare.fill" catalog="system" id="qdK-3n-BMc"/>
+                    <navigationItem key="navigationItem" title="貓咪" id="JqE-YD-pBl"/>
+                    <connections>
+                        <outlet property="backButton" destination="UKO-uD-4az" id="O7p-IU-du5"/>
+                        <outlet property="catPage" destination="2Rd-1x-a37" id="8o5-Jq-vW8"/>
+                        <outlet property="catScroll" destination="Wh3-pC-5cF" id="mzv-DH-wbq"/>
+                        <outlet property="catSegment" destination="b6m-fo-f7Y" id="IHU-hL-BUs"/>
+                        <outlet property="introduceCatMoive" destination="rcw-HZ-CJq" id="uOZ-Lu-r12"/>
+                        <outlet property="nextButton" destination="tsB-Bo-rq0" id="tjd-RQ-gzG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9CL-cj-neQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="7vC-gR-naW">
+                    <connections>
+                        <action selector="catSwipe:" destination="cMM-rX-RMw" id="F1d-Uf-Niy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="B2v-g4-Qca">
+                    <connections>
+                        <action selector="catSwipe:" destination="cMM-rX-RMw" id="Zed-2K-BAb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Kpl-nm-Vqr">
+                    <connections>
+                        <action selector="catSwipe:" destination="cMM-rX-RMw" id="NAA-2x-gUl"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="VId-zs-RwE">
+                    <connections>
+                        <action selector="catSwipe:" destination="cMM-rX-RMw" id="9Na-SG-AeQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="VHY-cm-j08">
+                    <connections>
+                        <action selector="catSwipe:" destination="cMM-rX-RMw" id="pPL-As-lo2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="uy0-CJ-Qes">
+                    <connections>
+                        <action selector="catSwipe:" destination="cMM-rX-RMw" id="RDK-yc-0AC"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="boC-AV-X6G">
+                    <connections>
+                        <action selector="catSwipe:" destination="cMM-rX-RMw" id="xUV-Ac-FeO"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="bpZ-87-t4v">
+                    <connections>
+                        <action selector="catSwipe:" destination="cMM-rX-RMw" id="vsh-E4-CD1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2829" y="802"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Unknown" width="265" height="190"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="hare.fill" catalog="system" width="128" height="91"/>
+        <image name="pawprint" catalog="system" width="128" height="116"/>
+        <image name="加菲貓" width="422" height="592"/>
+        <image name="極地守護犬" width="1024" height="1463"/>
+        <image name="比佛利拜金狗" width="266" height="374"/>
+        <image name="為了與你相遇" width="1400" height="787"/>
+        <image name="貓女" width="184" height="273"/>
+        <image name="遇見街貓" width="259" height="194"/>
+        <image name="雷霆戰狗" width="400" height="572"/>
+        <image name="黑貓魯道夫" width="532" height="759"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
